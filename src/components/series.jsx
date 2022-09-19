@@ -25,7 +25,7 @@ const Series = ({ series }) => {
           className="text-lg flex font-light outline-none focus:outline-none items-center transform transition-all hover:scale-110 text-white"
           onClick={() => navigate(`/type/tv`)}
         >
-          Wacth more
+          See more
           <AiFillCaretRight />
         </button>
       </div>

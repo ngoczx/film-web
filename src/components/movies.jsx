@@ -26,7 +26,7 @@ const Movies = ({ movies }) => {
           className="text-lg flex font-light outline-none focus:outline-none items-center transform transition-all hover:scale-110 text-white"
           onClick={() => navigate(`/type/movie`)}
         >
-          Watch more
+          See more
           <AiFillCaretRight />
         </button>
       </div>
