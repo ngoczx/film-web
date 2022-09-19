@@ -47,8 +47,6 @@ const DetailPage = () => {
     };
   });
 
-  console.log(credits);
-
   return (
     <div className="DetailPage">
       <div
