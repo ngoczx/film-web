@@ -57,7 +57,7 @@ const SearchPage = () => {
               ))}
         </div>
       )}
-      {type && (
+      {type && filmlist && (
         <div>
           <div className="flex flex-wrap justify-start items-start">
             {!results &&
