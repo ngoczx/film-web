@@ -19,9 +19,7 @@ const FilmsList = ({ film, type }) => {
           src={apiConfig.image(film.poster_path)}
           alt="img"
         ></img>
-      )) || (
-        <img src={AltPoster} alt="img" className="rounded shadow-2xl"></img>
-      )}
+      )) || <img src={AltPoster} alt="img" className="rounded h-fit"></img>}
 
       <h2 className="md:text-xl pt-2 truncate">{film.title || film.name}</h2>
       <p className="text-gray-500">
