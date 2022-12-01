@@ -7,7 +7,7 @@ const Footer = () => {
       id="footer"
       className="mt-10"
       style={{
-        backgroundImage: `url(https://xemphim.vip/static/skin/footer-bg.jpg)`,
+        backgroundImage: `url(https://xemphimm.com/static/skin/footer-bg.jpg)`,
       }}
     >
       <div className="lg:mx-40 md:mx-20 mx-10 py-20">
