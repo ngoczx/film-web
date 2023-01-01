@@ -37,7 +37,7 @@ const Header = ({ trending }) => {
           }}
           navigation={true}
           modules={[Autoplay, Navigation]}
-          className="mySwiper min-h-[560px]"
+          className="mySwiper 2xl:min-h-[560px]"
         >
           {trending.slice(0, 5).map((element) => (
             <SwiperSlide key={element.id}>
