@@ -38,7 +38,7 @@ const DetailPage = () => {
     return rhours + ' hour(s) ' + rminutes + ' minutes';
   }
 
-  let avatar = reviews.slice(0, 3).map((review) => {
+  let avatar = (reviews?.slice(0, 3) || []).map((review) => {
     return {
       id: review.id,
       name: review.author,
@@ -55,7 +55,7 @@ const DetailPage = () => {
           backgroundImage: `url(${apiConfig.image(detail.backdrop_path)})`,
         }}
       ></div>
-      <div className="flex flex-col justify-center items-center lg:items-start lg:flex-row -mt-72 2xl:mx-44">
+      <div className="flex flex-col justify-center items-center -mt-72 lg:items-start lg:flex-row lg:px-5 2xl:px-0 2xl:mx-44">
         <div>
           {(detail.poster_path && (
             <img
