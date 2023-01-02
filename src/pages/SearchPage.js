@@ -77,11 +77,9 @@ const SearchPage = () => {
         <div>
           <div className="flex flex-wrap justify-start items-start min-h-[100vh]">
             {!results &&
-              filmlist
-                .filter((element) => element.vote_average > 6)
-                .map((film) => (
-                  <FilmsList film={film} key={film.id} type={type} />
-                ))}
+              filmlist.map((film) => (
+                <FilmsList film={film} key={film.id} type={type} />
+              ))}
             {temp &&
               temp.map((film) => (
                 <FilmsList film={film} key={film.id} type={type} />
