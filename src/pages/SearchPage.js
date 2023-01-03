@@ -50,7 +50,6 @@ const SearchPage = () => {
     }
   }, [page, type]);
 
-  console.log(filmlist);
   return (
     <div className="2xl:mx-60 md:mx-2 mt-8 lg:mt-16">
       <input
@@ -93,7 +92,7 @@ const SearchPage = () => {
         </div>
       )}
       <div className="flex justify-center">
-        {type && (
+        {type && !results && (
           <button
             className="md:text-md text-sm py-1 px-7 border rounded-full text-white hover:bg-white hover:text-red-600"
             onClick={() => setPage((prev) => prev + 1)}
