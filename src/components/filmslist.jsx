@@ -33,7 +33,8 @@ const FilmsList = ({ film, type }) => {
           src={AltPoster}
           alt="img"
           style={loaded ? {} : { display: 'none' }}
-          className="rounded"
+          className="rounded cursor-pointer"
+          onLoad={() => setLoaded(true)}
           onClick={() => {
             navigate(`/${type}/${film.id}`);
           }}
