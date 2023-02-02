@@ -1,5 +1,6 @@
 import React from 'react';
 import { BsGithub, BsFacebook } from 'react-icons/bs';
+import FooterBG from '../assets/footer-bg.jpg';
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
       id="footer"
       className="mt-10"
       style={{
-        backgroundImage: `url(https://xemphim.vip/static/skin/footer-bg.jpg)`,
+        backgroundImage: `url(${FooterBG})`,
       }}
     >
       <div className="lg:mx-40 md:mx-20 mx-10 py-20">
