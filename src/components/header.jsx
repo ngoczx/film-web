@@ -5,7 +5,6 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import apiConfig from '../api/apiConfig';
 import 'swiper/css';
-import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
 const Header = ({ trending }) => {
@@ -13,7 +12,6 @@ const Header = ({ trending }) => {
   const [type, setType] = useState('');
   const [key, setKey] = useState('');
   const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (id) {
@@ -36,12 +34,11 @@ const Header = ({ trending }) => {
           centeredSlides={true}
           autoplay={{
             delay: 2500,
-            disableOnInteraction: false,
+            disableOnInteraction: true,
           }}
           navigation={true}
           modules={[Autoplay, Navigation]}
           className="mySwiper 2xl:min-h-[560px]"
-          style={!isLoading ? {} : { display: 'none' }}
         >
           {trending.slice(0, 5).map((element) => (
             <SwiperSlide key={element.id}>
@@ -50,7 +47,6 @@ const Header = ({ trending }) => {
                   className="hidden md:block w-full"
                   src={apiConfig.image(element.backdrop_path)}
                   alt="img"
-                  onLoad={() => setIsLoading(false)}
                 ></img>
                 <img
                   className="md:hidden"
@@ -97,15 +93,7 @@ const Header = ({ trending }) => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="hidden 2xl:block">
-          {isLoading && (
-            <Skeleton
-              width={'100%'}
-              height="560px"
-              highlightColor="#b5b5b5"
-            ></Skeleton>
-          )}
-        </div>
+
         {key && (
           <div
             className="trailerbg fixed z-50 top-0 w-full h-full flex justify-center items-center"
